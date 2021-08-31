@@ -1,4 +1,4 @@
-# nextjs-with-jest-typescript
+# corner-case-test
 
 A very simple example of Next.js-based website with Jest tests, all written in TypeScript.
 
@@ -37,7 +37,3 @@ https://github.com/vercel/next.js/tree/master/examples/with-typescript-eslint-je
 
 - does not use CSS files
 - uses `babel-jest` instead of `ts-jest`
-
----
-
-https://github.com/arcatdmz/nextjs-with-jest-typescript
