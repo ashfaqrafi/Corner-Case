@@ -1,8 +1,8 @@
-import styles from "./CurrentPlay.module.css";
+import styles from "./CurrentlyPlaying.module.css";
 import React from "react";
 import { IRadioData } from "../models/index";
 
-export const CurrentPlay = ({
+export const CurrentlyPlaying = ({
   selectedRadio,
 }: {
   selectedRadio: IRadioData | null;

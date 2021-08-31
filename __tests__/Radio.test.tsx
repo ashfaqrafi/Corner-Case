@@ -1,7 +1,7 @@
 import { mount } from "enzyme";
 import React from "react";
 import Radio from "../components/Radio";
-import { CurrentPlay } from "../components/CurrentPlay";
+import { CurrentlyPlaying } from "../components/CurrentlyPlaying";
 
 describe("Radio Component", () => {
   const getSelectedRadio = {
@@ -45,8 +45,8 @@ describe("Radio Component", () => {
     expect(mockCallBack).toHaveBeenCalled();
   });
 
-  it("should display the CurrentPlay component when one radio item is clicked", async () => {
-    // CurrentPlay does not exists before one radio item is clicked
+  it("should display the CurrentlyPlaying component when one radio item is clicked", async () => {
+    // CurrentlyPlaying does not exists before one radio item is clicked
     const app = mount(<Radio />);
     const displayDivBeforeClick = app.find(".radio-name");
     expect(displayDivBeforeClick.exists()).toBe(false);
@@ -55,8 +55,10 @@ describe("Radio Component", () => {
     const getButton = app.find(".radio-item");
     getButton.at(0).simulate("click");
 
-    // CurrentPlay component is mounted
-    const wrapper = mount(<CurrentPlay selectedRadio={getSelectedRadio} />);
+    // CurrentlyPlaying component is mounted
+    const wrapper = mount(
+      <CurrentlyPlaying selectedRadio={getSelectedRadio} />
+    );
     const displayDivAfterClick = wrapper.find(".radio-name");
 
     // Radio name is displayed after click and the component is mounted
@@ -64,10 +66,10 @@ describe("Radio Component", () => {
     expect(displayDivAfterClick.text()).toEqual(getSelectedRadio.name);
   });
 
-  it("should toggle CurrentPlay component when one radio item is clicked", () => {
+  it("should toggle CurrentlyPlaying component when one radio item is clicked", () => {
     const wrapper = mount(<Radio />);
     wrapper.find(".radio-item").at(0).simulate("click");
-    expect(wrapper.find(CurrentPlay).exists()).toBe(true);
+    expect(wrapper.find(CurrentlyPlaying).exists()).toBe(true);
     expect(wrapper.exists(".radio-name")).toBe(true);
   });
 });
