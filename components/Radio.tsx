@@ -56,10 +56,10 @@ export default function Radio() {
   );
 
   return (
-    <div>
+    <div className="radio-wrapper">
       <div className={styles.radioWrapper}>
         <>
-          <div className={styles.radioHeader}>
+          <div className={`${styles.radioHeader} radio-header`}>
             <div>
               <Image
                 src="/back-arrow.png"
@@ -80,15 +80,15 @@ export default function Radio() {
               />
             </div>
           </div>
-          <div className={styles.radioBody}>
-            <div className={styles.radioList}>
+          <div className={`${styles.radioBody} radio-body`}>
+            <div className={`${styles.radioList} radio-list`}>
               {radioStationData?.map((radio: IRadioData) => (
                 <div
                   key={radio?.id}
                   onClick={() => {
                     setSelectedRadio(radio);
                   }}
-                  className={styles.radioItem}
+                  className={`${styles.radioItem} radio-item`}
                 >
                   <Accordion collapsible>
                     <AccordionItem>
@@ -135,7 +135,7 @@ export default function Radio() {
               ))}
             </div>
           </div>
-          <div className={styles.radioFooter}>
+          <div className={`${styles.radioFooter} radio-footer`}>
             {selectedRadio && <CurrentPlay selectedRadio={selectedRadio} />}
           </div>
         </>

@@ -1,6 +1,6 @@
 import { mount } from "enzyme";
 import React from "react";
-import App from "../pages/index";
+import Radio from "../components/Radio";
 import { CurrentPlay } from "../components/CurrentPlay";
 
 describe("Radio Component", () => {
@@ -11,33 +11,33 @@ describe("Radio Component", () => {
   };
 
   it("renders the whole component", () => {
-    const app = mount(<App />);
+    const app = mount(<Radio />);
     expect(app.exists(".radio-wrapper")).toEqual(true);
   });
 
   it("renders the header section", () => {
-    const app = mount(<App />);
+    const app = mount(<Radio />);
     expect(app.exists(".radio-header")).toEqual(true);
   });
 
   it("renders the body section", () => {
-    const app = mount(<App />);
+    const app = mount(<Radio />);
     expect(app.exists(".radio-body")).toEqual(true);
   });
 
   it("renders the footer section", () => {
-    const app = mount(<App />);
+    const app = mount(<Radio />);
     expect(app.exists(".radio-footer")).toEqual(true);
   });
 
   it("renders all the radio lists", () => {
-    const app = mount(<App />);
+    const app = mount(<Radio />);
     expect(app.exists(".radio-list")).toEqual(true);
   });
 
   it("should call mock function when a radio item from the list is clicked", () => {
     const mockCallBack = jest.fn();
-    const app = mount(<App />);
+    const app = mount(<Radio />);
     const getItem = app.find(".radio-item");
     getItem.at(0).simulate("click");
     const tree = mount(<div className="radio-item" onClick={mockCallBack} />);
@@ -47,7 +47,7 @@ describe("Radio Component", () => {
 
   it("should display the CurrentPlay component when one radio item is clicked", async () => {
     // CurrentPlay does not exists before one radio item is clicked
-    const app = mount(<App />);
+    const app = mount(<Radio />);
     const displayDivBeforeClick = app.find(".radio-name");
     expect(displayDivBeforeClick.exists()).toBe(false);
 
@@ -65,7 +65,7 @@ describe("Radio Component", () => {
   });
 
   it("should toggle CurrentPlay component when one radio item is clicked", () => {
-    const wrapper = mount(<App />);
+    const wrapper = mount(<Radio />);
     wrapper.find(".radio-item").at(0).simulate("click");
     expect(wrapper.find(CurrentPlay).exists()).toBe(true);
     expect(wrapper.exists(".radio-name")).toBe(true);

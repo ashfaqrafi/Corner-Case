@@ -10,7 +10,9 @@ export const CurrentPlay = ({
   return (
     <div>
       <div className={styles.radioPlay}>CURRENTLY PLAYING</div>
-      <div className={styles.radioName}>{selectedRadio?.name}</div>
+      <div className={`${styles.radioName} radio-name`}>
+        {selectedRadio?.name}
+      </div>
     </div>
   );
 };
