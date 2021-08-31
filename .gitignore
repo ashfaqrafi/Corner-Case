@@ -3,6 +3,7 @@ node_modules/
 .vscode
 .cache/
 dist/
+**/.DS_Store
 .DS_Store
 coverage/
 .vscode/
