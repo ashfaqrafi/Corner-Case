@@ -1,0 +1,64 @@
+{
+  "name": "corner-case-assignment",
+  "version": "1.0.0",
+  "description": "This Assignment is done with Next.js and Jest tests, all written in TypeScript",
+  "scripts": {
+    "test": "jest",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Ashfaq Mahmood Rafi",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "@reach/accordion": "^0.16.1",
+    "@types/react-transition-group": "^4.4.2",
+    "next": "^10.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-transition-group": "^4.4.2"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.10.8",
+    "@types/jest": "^26.0.21",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.5.0",
+    "enzyme": "^3.11.0",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.4",
+    "typescript": "^4.2.3"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testMatch": [
+      "**/__tests__/*.(ts|tsx)"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.ts"
+    ],
+    "testPathIgnorePatterns": [
+      "./.next/",
+      "./node_modules/"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsconfig": "tsconfig.jest.json"
+      }
+    }
+  }
+}

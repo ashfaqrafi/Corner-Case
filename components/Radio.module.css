@@ -1,0 +1,77 @@
+.radioWrapper {
+  color: #a4b0bf;
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 500px;
+  border-radius: 2rem;
+}
+
+.radioHeader {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(242, 167, 102, 0.9);
+  padding: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.radioFooter {
+  background-color: #1d1d26;
+  padding-top: 2rem;
+  text-align: center;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border-top: 1px solid #616161;
+  min-height: 100px;
+}
+
+.radioBody {
+  background-color: rgba(29, 29, 38, 0.9);
+  padding: 1rem;
+  padding-top: 2rem;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.radioData {
+  display: flex;
+  font-size: 30px;
+  justify-content: space-between;
+}
+
+.radioName {
+  font-size: 40px;
+}
+
+.radioItem:not(:last-child) {
+  border-bottom: 1px solid #616161;
+}
+
+.radioThumb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.radioThumbnail {
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.radioBody::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.radioBody::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.radioBody::-webkit-scrollbar-thumb {
+  background-color: #a4b0bf;
+  outline: 1px solid #a4b0bf;
+}
