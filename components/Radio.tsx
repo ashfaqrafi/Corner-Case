@@ -12,38 +12,13 @@ import {
 import { CurrentlyPlaying } from "./CurrentlyPlaying";
 
 function StyledAccordionPanel(props: any) {
-  return <AccordionPanel style={{ padding: 10 }} {...props} />;
+  return <AccordionPanel className={styles.accordionPanel} {...props} />;
 }
 
 function GroupedAccordionHeader({ children }) {
   return (
-    <div
-      style={{
-        alignItems: "center",
-        margin: "9px 0",
-        display: "flex",
-        justifyContent: "space-between",
-        padding: "4px 10px",
-      }}
-    >
-      <AccordionButton
-        style={{
-          appearance: "none",
-          background: 0,
-          border: 0,
-          boxShadow: "none",
-          color: "inherit",
-          cursor: "pointer",
-          display: "block",
-          textAlign: "inherit",
-          flexGrow: 1,
-          flexShrink: 0,
-          font: "inherit",
-          fontWeight: "bold",
-          margin: 0,
-          padding: "10px 0",
-        }}
-      >
+    <div className={styles.accordionWrapper}>
+      <AccordionButton className={styles.accordionButton}>
         {children}
       </AccordionButton>
     </div>

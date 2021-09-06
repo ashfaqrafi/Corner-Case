@@ -70,3 +70,32 @@
   background-color: #a4b0bf;
   outline: 1px solid #a4b0bf;
 }
+
+.accordionButton {
+  appearance: none;
+  background: 0;
+  border: 0;
+  box-shadow: none;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  text-align: inherit;
+  flex-grow: 1;
+  flex-shrink: 0;
+  font: inherit;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.accordionPanel {
+  padding: 10px;
+}
+
+.accordionWrapper {
+  align-items: center;
+  margin: 9px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 10px;
+}
