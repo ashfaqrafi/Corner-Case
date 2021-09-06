@@ -11,12 +11,10 @@ import {
 } from "@reach/accordion";
 import { CurrentlyPlaying } from "./CurrentlyPlaying";
 
-// Accordion Panel function
 function StyledAccordionPanel(props: any) {
   return <AccordionPanel style={{ padding: 10 }} {...props} />;
 }
 
-// Accordion Header function
 function GroupedAccordionHeader({ children }) {
   return (
     <div
@@ -53,7 +51,6 @@ function GroupedAccordionHeader({ children }) {
 }
 
 export default function Radio() {
-  // the selected Radio station is put into state
   const [selectedRadio, setSelectedRadio] = React.useState<IRadioData | null>(
     null
   );
@@ -86,9 +83,6 @@ export default function Radio() {
           <div className={`${styles.radioBody} radio-body`}>
             <div className={`${styles.radioList} radio-list`}>
               {radioStationData?.map((radio: IRadioData) => (
-                //  radioStationData is the array of radio station data, it will not have to be changed if we use backend API call to GET Radio Lists.
-                //  Just put the API response data in this variable.
-                //  IRadioData is Radio Data model interface
                 <div
                   key={radio?.id}
                   onClick={() => {
@@ -96,7 +90,6 @@ export default function Radio() {
                   }}
                   className={`${styles.radioItem} radio-item`}
                 >
-                  {/* Accordion starts */}
                   <Accordion collapsible>
                     <AccordionItem>
                       <GroupedAccordionHeader>
@@ -138,19 +131,15 @@ export default function Radio() {
                       </StyledAccordionPanel>
                     </AccordionItem>
                   </Accordion>
-                  {/* Accordion ends */}
                 </div>
               ))}
             </div>
           </div>
-          {/* Footer starts */}
           <div className={`${styles.radioFooter} radio-footer`}>
-            {/* sends selectedRadio data as props to the CurrentlyPlaying component to display currently playing radio name */}
             {selectedRadio && (
               <CurrentlyPlaying selectedRadio={selectedRadio} />
             )}
           </div>
-          {/* Footer ends */}
         </>
       </div>
     </div>

@@ -2,8 +2,6 @@
   color: #a4b0bf;
   display: block;
   margin: 0 auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
   width: 500px;
   border-radius: 2rem;
 }
@@ -12,9 +10,7 @@
   display: flex;
   justify-content: space-between;
   background-color: rgba(242, 167, 102, 0.9);
-  padding: 1.5rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem 1.5rem;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
 }
@@ -31,8 +27,7 @@
 
 .radioBody {
   background-color: rgba(29, 29, 38, 0.9);
-  padding: 1rem;
-  padding-top: 2rem;
+  padding: 2rem 1rem;
   max-height: 500px;
   overflow-y: auto;
 }

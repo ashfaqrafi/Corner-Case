@@ -1,5 +1,3 @@
-// static data of radio stations
-
 export const radioStationData = [
   {
     id: 1,

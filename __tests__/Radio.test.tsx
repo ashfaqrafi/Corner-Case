@@ -35,16 +35,6 @@ describe("Radio Component", () => {
     expect(app.exists(".radio-list")).toEqual(true);
   });
 
-  it("should call mock function when a radio item from the list is clicked", () => {
-    const mockCallBack = jest.fn();
-    const app = mount(<Radio />);
-    const getItem = app.find(".radio-item");
-    getItem.at(0).simulate("click");
-    const tree = mount(<div className="radio-item" onClick={mockCallBack} />);
-    tree.simulate("click");
-    expect(mockCallBack).toHaveBeenCalled();
-  });
-
   it("should display the CurrentlyPlaying component when one radio item is clicked", async () => {
     // CurrentlyPlaying does not exists before one radio item is clicked
     const app = mount(<Radio />);
